@@ -7,46 +7,46 @@ import {
   Map,
   Headphones,
   Shield,
-  CreditCard,
+  CalendarCheck,
 } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Plane,
-    title: "Flight Booking",
+    icon: Map,
+    title: "Bespoke Itinerary Design",
     description:
-      "Access to the best airfare deals worldwide with flexible booking options and premium cabin upgrades.",
+      "Our travel consultants design custom itineraries tailored to your preferences, interests, and pace. Every detail is planned by our team.",
+  },
+  {
+    icon: Plane,
+    title: "Flight Booking Assistance",
+    description:
+      "We research, compare, and book the best flights for your journey. Premium cabins, flexible options, and the best routes — handled by us.",
   },
   {
     icon: Hotel,
-    title: "Hotel Reservations",
+    title: "Hotel & Resort Coordination",
     description:
-      "Handpicked luxury hotels, boutique resorts, and unique accommodations tailored to your preferences.",
+      "We personally vet and book luxury accommodations — from five-star hotels to boutique villas — ensuring quality and your satisfaction.",
   },
   {
-    icon: Map,
-    title: "Custom Itineraries",
+    icon: CalendarCheck,
+    title: "Vacation Package Coordination",
     description:
-      "Personalized travel plans designed around your interests, pace, and budget for a seamless journey.",
+      "We assemble complete travel packages with confirmed bookings, transfers, and activities. You receive a fully organized travel experience.",
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
+    title: "Personal Travel Concierge",
     description:
-      "Round-the-clock assistance before, during, and after your trip for complete peace of mind.",
+      "Dedicated concierge support before, during, and after your trip. Restaurant reservations, local experiences, and real-time assistance.",
   },
   {
     icon: Shield,
-    title: "Travel Insurance",
+    title: "Travel Protection Guidance",
     description:
-      "Comprehensive coverage options to protect your investment and ensure worry-free travels.",
-  },
-  {
-    icon: CreditCard,
-    title: "Flexible Payments",
-    description:
-      "Convenient payment plans and financing options to make your dream vacation accessible.",
+      "We advise on comprehensive travel insurance options and help you understand cancellation policies for complete peace of mind.",
   },
 ];
 
@@ -55,15 +55,15 @@ export function Services() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-gold text-sm font-medium tracking-[0.3em] uppercase">
+          <span className="text-gold text-xs font-medium tracking-[0.4em] uppercase">
             Our Services
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy mt-3 mb-5">
-            Everything You Need to Travel
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mt-3 mb-5">
+            What We Do for You
           </h2>
           <p className="text-slate max-w-2xl mx-auto text-lg">
-            From planning to landing, we handle every detail so you can focus on
-            creating memories.
+            AW GOTRAVEL provides direct travel planning and booking assistance
+            services. Every service below is performed by our team.
           </p>
         </AnimatedSection>
 
@@ -74,7 +74,7 @@ export function Services() {
                 <div className="w-14 h-14 rounded-xl bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center mb-6 transition-colors duration-300">
                   <service.icon className="w-7 h-7 text-navy group-hover:text-gold transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-semibold text-navy mb-3">
                   {service.title}
                 </h3>
                 <p className="text-slate text-sm leading-relaxed">
@@ -88,9 +88,9 @@ export function Services() {
         <AnimatedSection className="text-center mt-14">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 border-2 border-navy hover:bg-navy text-navy hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-sm uppercase tracking-wider"
+            className="inline-flex items-center gap-2 border-2 border-navy hover:bg-navy text-navy hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-sm uppercase tracking-[0.2em]"
           >
-            All Services
+            View All Services
           </Link>
         </AnimatedSection>
       </div>

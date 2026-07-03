@@ -37,13 +37,10 @@ const quickLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const destinations = [
-  "Caribbean",
-  "Europe",
-  "Southeast Asia",
-  "South America",
-  "Africa",
-  "Australia",
+const legalLinks = [
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/refund-policy", label: "Refund & Cancellation Policy" },
 ];
 
 export function Footer() {
@@ -53,9 +50,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <Logo light className="mb-6" />
-            <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Your trusted partner for premium travel experiences. Let us plan
-              your next unforgettable adventure around the world.
+            <p className="text-white/70 text-sm leading-relaxed mb-4">
+              AW GOTRAVEL LLC provides luxury travel planning, itinerary
+              design, booking assistance, and personal concierge services.
+            </p>
+            <p className="text-white/50 text-xs mb-6">
+              Registered in Wyoming, USA
             </p>
             <div className="flex gap-4">
               {socialIcons.map((Icon, i) => (
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-5">
+            <h4 className="text-gold font-semibold text-xs uppercase tracking-[0.2em] mb-5">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -89,17 +89,17 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-5">
-              Destinations
+            <h4 className="text-gold font-semibold text-xs uppercase tracking-[0.2em] mb-5">
+              Legal
             </h4>
             <ul className="space-y-3">
-              {destinations.map((dest) => (
-                <li key={dest}>
+              {legalLinks.map((link) => (
+                <li key={link.href}>
                   <Link
-                    href="/destinations"
+                    href={link.href}
                     className="text-white/70 hover:text-gold transition-colors text-sm"
                   >
-                    {dest}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -107,7 +107,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-5">
+            <h4 className="text-gold font-semibold text-xs uppercase tracking-[0.2em] mb-5">
               Contact Us
             </h4>
             <div className="space-y-4">
@@ -118,13 +118,10 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-gold shrink-0" />
                 sales@awgotravel.com
               </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-3 text-white/70 hover:text-gold transition-colors text-sm"
-              >
+              <div className="flex items-center gap-3 text-white/70 text-sm">
                 <Phone className="w-4 h-4 text-gold shrink-0" />
-                Contact Us
-              </a>
+                Available upon request
+              </div>
               <div className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                 <span>Wyoming, United States</span>
@@ -137,15 +134,19 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-xs">
-            &copy; {new Date().getFullYear()} AW GO TRAVEL LLC. All rights reserved.
+            &copy; {new Date().getFullYear()} AW GOTRAVEL LLC. All rights
+            reserved. Registered in Wyoming, USA.
           </p>
           <div className="flex gap-6 text-white/50 text-xs">
-            <a href="#" className="hover:text-gold transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-gold transition-colors">
-              Terms of Service
-            </a>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-gold transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -117,7 +117,7 @@ export default function ContactPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
-            className="text-gold text-sm font-medium tracking-[0.3em] uppercase"
+            className="text-gold text-xs font-medium tracking-[0.4em] uppercase"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -125,7 +125,7 @@ export default function ContactPage() {
             Get in Touch
           </motion.span>
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-5"
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mt-3 mb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -150,12 +150,13 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <AnimatedSection>
                 <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-10">
-                  <h2 className="text-2xl font-bold text-navy mb-2">
-                    Request a Free Quote
+                  <h2 className="text-2xl font-semibold text-navy mb-2">
+                    Request a Travel Consultation
                   </h2>
                   <p className="text-slate text-sm mb-8">
-                    Tell us about your dream trip and we&apos;ll create a
-                    personalized proposal for you.
+                    Tell us about your ideal journey. Our consultants will design
+                    a personalized itinerary and provide a detailed service
+                    proposal.
                   </p>
 
                   {status === "sent" ? (
@@ -280,11 +281,11 @@ export default function ContactPage() {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors text-sm bg-white text-navy"
                           >
                             <option value="">Select budget</option>
-                            <option value="under-1000">Under $1,000</option>
-                            <option value="1000-3000">$1,000 - $3,000</option>
                             <option value="3000-5000">$3,000 - $5,000</option>
                             <option value="5000-10000">$5,000 - $10,000</option>
-                            <option value="10000+">$10,000+</option>
+                            <option value="10000-25000">$10,000 - $25,000</option>
+                            <option value="25000-50000">$25,000 - $50,000</option>
+                            <option value="50000+">$50,000+</option>
                           </select>
                         </div>
                       </div>

@@ -6,46 +6,46 @@ import Link from "next/link";
 
 const destinations = [
   {
-    title: "Maldives",
+    title: "The Maldives",
     region: "Indian Ocean",
-    description: "Crystal clear waters and overwater villas in paradise",
+    description: "Private overwater villas, personal butler service, and untouched coral reefs",
     image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80",
-    price: "From $2,499",
+    price: "From $4,900",
   },
   {
     title: "Santorini",
     region: "Greece",
-    description: "Iconic white architecture and stunning Aegean sunsets",
+    description: "Cliffside suites with caldera views, private yacht charters, and wine tasting tours",
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80",
-    price: "From $1,899",
+    price: "From $3,800",
   },
   {
     title: "Bali",
     region: "Indonesia",
-    description: "Ancient temples, emerald rice terraces, and tropical bliss",
+    description: "Jungle retreats, private temple ceremonies, and bespoke wellness experiences",
     image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
-    price: "From $1,599",
+    price: "From $3,200",
   },
   {
     title: "Swiss Alps",
     region: "Switzerland",
-    description: "Majestic mountain peaks and charming alpine villages",
+    description: "Exclusive chalets, helicopter tours, and Michelin-star alpine dining",
     image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80",
-    price: "From $2,199",
+    price: "From $5,500",
   },
   {
-    title: "Cancún",
-    region: "Mexico",
-    description: "Pristine beaches, vibrant nightlife, and ancient Mayan ruins",
-    image: "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=800&q=80",
-    price: "From $999",
+    title: "Amalfi Coast",
+    region: "Italy",
+    description: "Cliffside villas, private boat excursions, and curated gastronomic journeys",
+    image: "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?auto=format&fit=crop&w=800&q=80",
+    price: "From $4,200",
   },
   {
     title: "Tokyo",
     region: "Japan",
-    description: "Where ancient tradition meets futuristic innovation",
+    description: "Ryokan retreats, private tea ceremonies, and exclusive cultural immersion",
     image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80",
-    price: "From $1,799",
+    price: "From $4,600",
   },
 ];
 
@@ -54,15 +54,15 @@ export function FeaturedDestinations() {
     <section className="py-24 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-gold text-sm font-medium tracking-[0.3em] uppercase">
-            Top Destinations
+          <span className="text-gold text-xs font-medium tracking-[0.4em] uppercase">
+            Curated Destinations
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy mt-3 mb-5">
-            Where Dreams Take Flight
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mt-3 mb-5">
+            Where Luxury Meets Discovery
           </h2>
           <p className="text-slate max-w-2xl mx-auto text-lg">
-            Explore our handpicked collection of the world&apos;s most
-            captivating destinations, curated for the ultimate travel experience.
+            Each destination is personally vetted by our travel consultants.
+            We handle all planning, reservations, and coordination directly.
           </p>
         </AnimatedSection>
 
@@ -77,7 +77,7 @@ export function FeaturedDestinations() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
-                  <div className="absolute top-4 right-4 bg-gold text-navy text-xs font-bold px-3 py-1.5 rounded-full">
+                  <div className="absolute top-4 right-4 bg-gold text-navy text-xs font-bold px-3 py-1.5 rounded-full tracking-wide">
                     {dest.price}
                   </div>
                   <div className="absolute bottom-4 left-4 flex items-center gap-1.5 text-white">
@@ -86,7 +86,7 @@ export function FeaturedDestinations() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy mb-2">
+                  <h3 className="text-xl font-semibold text-navy mb-2">
                     {dest.title}
                   </h3>
                   <p className="text-slate text-sm mb-4 leading-relaxed">
@@ -94,9 +94,9 @@ export function FeaturedDestinations() {
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 text-gold font-semibold text-sm hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-gold font-semibold text-sm hover:gap-3 transition-all duration-300 tracking-wide"
                   >
-                    Learn More <ArrowRight className="w-4 h-4" />
+                    Request Itinerary <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function FeaturedDestinations() {
         <AnimatedSection className="text-center mt-12">
           <Link
             href="/destinations"
-            className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl text-sm uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl text-sm uppercase tracking-[0.2em]"
           >
             View All Destinations <ArrowRight className="w-4 h-4" />
           </Link>

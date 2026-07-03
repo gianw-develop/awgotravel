@@ -1,38 +1,40 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "AW GO TRAVEL | Premium Travel Agency",
+  title: "AW GOTRAVEL | Luxury Travel Planning & Concierge Services",
   description:
-    "AW GO TRAVEL LLC - Your premium travel agency for unforgettable experiences. Expert travel planning, exclusive destinations, and personalized service.",
+    "AW GOTRAVEL LLC provides luxury travel planning, bespoke itinerary design, hotel and flight booking assistance, vacation package coordination, and personal travel concierge services.",
   keywords: [
-    "travel agency",
-    "luxury travel",
-    "vacation planning",
-    "travel booking",
-    "AW GO TRAVEL",
+    "luxury travel agency",
+    "travel planning",
+    "bespoke itineraries",
+    "travel concierge",
+    "AW GOTRAVEL",
+    "booking assistance",
   ],
   openGraph: {
-    title: "AW GO TRAVEL | Premium Travel Agency",
+    title: "AW GOTRAVEL | Luxury Travel Planning & Concierge Services",
     description:
-      "Your premium travel agency for unforgettable experiences worldwide.",
+      "Bespoke luxury travel planning, itinerary design, and personal concierge services for discerning travelers.",
     url: "https://www.awgotravel.com",
-    siteName: "AW GO TRAVEL",
+    siteName: "AW GOTRAVEL",
     type: "website",
   },
 };
@@ -45,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${raleway.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

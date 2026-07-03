@@ -8,7 +8,7 @@ interface LogoProps {
 
 export function Logo({ className = "", variant = "full", light = false }: LogoProps) {
   const primaryColor = light ? "#FFFFFF" : "#0B1D3A";
-  const accentColor = "#D4A853";
+  const accentColor = "#C9A84C";
 
   if (variant === "icon") {
     return (
@@ -27,10 +27,7 @@ export function Logo({ className = "", variant = "full", light = false }: LogoPr
           strokeLinejoin="round"
           fill="none"
         />
-        <path
-          d="M38 18L42 16L44 20L38 18Z"
-          fill={accentColor}
-        />
+        <path d="M38 18L42 16L44 20L38 18Z" fill={accentColor} />
         <path
           d="M36 20C34 22 30 24 24 26"
           stroke={accentColor}
@@ -66,10 +63,7 @@ export function Logo({ className = "", variant = "full", light = false }: LogoPr
           strokeLinejoin="round"
           fill="none"
         />
-        <path
-          d="M32 16L36 14L38 18L32 16Z"
-          fill={accentColor}
-        />
+        <path d="M32 16L36 14L38 18L32 16Z" fill={accentColor} />
         <path
           d="M30 18C28 20 24 22 18 24"
           stroke={accentColor}
@@ -80,16 +74,16 @@ export function Logo({ className = "", variant = "full", light = false }: LogoPr
       </svg>
       <div className="flex flex-col">
         <span
-          className="text-lg sm:text-xl font-bold tracking-wider leading-tight"
+          className="text-lg sm:text-xl font-semibold tracking-[0.15em] leading-tight"
           style={{ color: primaryColor, fontFamily: "var(--font-heading)" }}
         >
-          AW GO TRAVEL
+          AW GOTRAVEL
         </span>
         <span
-          className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase"
-          style={{ color: accentColor }}
+          className="text-[8px] sm:text-[9px] tracking-[0.35em] uppercase font-medium"
+          style={{ color: accentColor, fontFamily: "var(--font-sans)" }}
         >
-          Premium Experiences
+          Luxury Travel Services
         </span>
       </div>
     </div>

@@ -49,19 +49,12 @@ export function Hero() {
         <div className="animate-fly-across absolute top-[55%]" style={{ animationDelay: "4s" }}>
           <AirplaneIcon className="w-6 h-6 text-white/15" />
         </div>
-
         <div className="animate-cloud-drift absolute top-[20%] text-white/5 w-48">
           <CloudShape />
         </div>
         <div
           className="animate-cloud-drift absolute top-[60%] text-white/3 w-64"
           style={{ animationDelay: "-15s", animationDuration: "40s" }}
-        >
-          <CloudShape />
-        </div>
-        <div
-          className="animate-cloud-drift absolute top-[40%] text-white/4 w-40"
-          style={{ animationDelay: "-8s", animationDuration: "35s" }}
         >
           <CloudShape />
         </div>
@@ -79,20 +72,20 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block text-gold text-sm sm:text-base font-medium tracking-[0.3em] uppercase mb-6 border border-gold/30 px-5 py-2 rounded-full">
-            Premium Travel Experiences
+          <span className="inline-block text-gold text-xs sm:text-sm font-medium tracking-[0.4em] uppercase mb-6 border border-gold/30 px-6 py-2.5 rounded-full">
+            Luxury Travel Planning &amp; Concierge
           </span>
         </motion.div>
 
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Discover the World
+          Bespoke Journeys,
           <br />
-          <span className="gradient-text">Your Way</span>
+          <span className="gradient-text">Crafted for You</span>
         </motion.h1>
 
         <motion.p
@@ -101,9 +94,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Curated journeys to the world&apos;s most breathtaking destinations.
-          Let us create your perfect travel experience with expert planning and
-          personalized service.
+          We design and coordinate exclusive travel experiences — from itinerary
+          planning and booking assistance to personal concierge service at every
+          stage of your journey.
         </motion.p>
 
         <motion.div
@@ -114,15 +107,15 @@ export function Hero() {
         >
           <Link
             href="/destinations"
-            className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 text-sm uppercase tracking-wider animate-pulse-glow"
+            className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 text-sm uppercase tracking-[0.2em] animate-pulse-glow"
           >
             Explore Destinations
           </Link>
           <Link
             href="/contact"
-            className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 text-sm uppercase tracking-wider"
+            className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 text-sm uppercase tracking-[0.2em]"
           >
-            Plan Your Trip
+            Request a Consultation
           </Link>
         </motion.div>
 
@@ -133,16 +126,15 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.2 }}
         >
           {[
-            { number: "500+", label: "Destinations" },
-            { number: "10K+", label: "Happy Travelers" },
-            { number: "15+", label: "Years Experience" },
-            { number: "24/7", label: "Support" },
+            { number: "200+", label: "Luxury Destinations" },
+            { number: "100%", label: "Tailored Service" },
+            { number: "24/7", label: "Concierge Support" },
           ].map((stat) => (
             <div key={stat.label} className="text-center hidden sm:block">
-              <div className="text-2xl md:text-3xl font-bold text-gold">
+              <div className="text-2xl md:text-3xl font-semibold text-gold">
                 {stat.number}
               </div>
-              <div className="text-white/60 text-xs uppercase tracking-wider mt-1">
+              <div className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-1">
                 {stat.label}
               </div>
             </div>

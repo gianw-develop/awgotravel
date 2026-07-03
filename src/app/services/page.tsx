@@ -114,7 +114,7 @@ export default function ServicesPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
-            className="text-gold text-sm font-medium tracking-[0.3em] uppercase"
+            className="text-gold text-xs font-medium tracking-[0.4em] uppercase"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -122,7 +122,7 @@ export default function ServicesPage() {
             What We Offer
           </motion.span>
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-5"
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mt-3 mb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
