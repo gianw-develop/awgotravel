@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Logo } from "@/components/Logo";
 import { Mail, Lock, User, ArrowRight, Eye, EyeOff } from "lucide-react";
 
 export default function RegisterPage() {
@@ -77,7 +78,7 @@ export default function RegisterPage() {
         >
           <div className="mb-10">
             <Link href="/" className="inline-block mb-8">
-              <img src="/logo.png" alt="AW GOTRAVEL" className="h-10 object-contain" />
+              <Logo />
             </Link>
             <h1 className="text-2xl font-light text-navy tracking-tight">
               Create <span className="font-medium">Account</span>

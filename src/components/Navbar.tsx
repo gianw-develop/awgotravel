@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -32,11 +33,7 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-          <img
-            src="/logo.png"
-            alt="AW GOTRAVEL"
-            className="h-9 sm:h-10 object-contain"
-          />
+          <Logo light />
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">

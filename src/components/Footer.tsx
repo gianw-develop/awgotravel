@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "./Logo";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 function FacebookIcon({ className = "" }: { className?: string }) {
@@ -48,11 +49,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
-            <img
-              src="/logo.png"
-              alt="AW GOTRAVEL"
-              className="h-10 object-contain mb-6"
-            />
+            <Logo light className="mb-6" />
             <p className="text-white/50 text-sm leading-relaxed mb-4 font-light">
               A private travel design and lifestyle coordination firm for
               founders, executives, and high-profile clients.
