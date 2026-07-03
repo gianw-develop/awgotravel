@@ -72,31 +72,33 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block text-gold text-xs sm:text-sm font-medium tracking-[0.4em] uppercase mb-6 border border-gold/30 px-6 py-2.5 rounded-full">
-            Luxury Travel Planning &amp; Concierge
+          <span className="inline-block text-gold text-[10px] sm:text-xs font-medium tracking-[0.5em] uppercase mb-8 border border-gold/30 px-6 py-2.5 rounded-full">
+            Private Travel Design &amp; Lifestyle Coordination
           </span>
         </motion.div>
 
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6 tracking-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Bespoke Journeys,
+          Beyond Travel.
           <br />
-          <span className="gradient-text">Crafted for You</span>
+          <span className="gradient-text font-medium">Private Experiences</span>
+          <br />
+          <span className="font-light">Designed Around You.</span>
         </motion.h1>
 
         <motion.p
-          className="text-white/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-white/70 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          We design and coordinate exclusive travel experiences — from itinerary
-          planning and booking assistance to personal concierge service at every
-          stage of your journey.
+          AW GOTRAVEL is a boutique travel design firm creating private, high-end
+          experiences for executives, founders, and discerning travelers. Every
+          journey is designed with privacy, precision, and intention.
         </motion.p>
 
         <motion.div
@@ -106,35 +108,35 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <Link
-            href="/destinations"
-            className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 text-sm uppercase tracking-[0.2em] animate-pulse-glow"
+            href="/services"
+            className="bg-gold hover:bg-gold-dark text-navy font-medium px-10 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold/20 text-xs uppercase tracking-[0.3em] animate-pulse-glow"
           >
-            Explore Destinations
+            Explore Services
           </Link>
           <Link
             href="/contact"
-            className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/10 text-sm uppercase tracking-[0.2em]"
+            className="border border-white/30 hover:border-white text-white font-medium px-10 py-4 rounded-full transition-all duration-300 hover:bg-white/10 text-xs uppercase tracking-[0.3em]"
           >
-            Request a Consultation
+            Private Inquiry
           </Link>
         </motion.div>
 
         <motion.div
-          className="flex justify-center gap-12 mt-16"
+          className="flex justify-center gap-16 mt-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
         >
           {[
-            { number: "200+", label: "Luxury Destinations" },
-            { number: "100%", label: "Tailored Service" },
-            { number: "24/7", label: "Concierge Support" },
+            { number: "Private", label: "Travel Design" },
+            { number: "Global", label: "Coordination" },
+            { number: "24/7", label: "Concierge" },
           ].map((stat) => (
             <div key={stat.label} className="text-center hidden sm:block">
-              <div className="text-2xl md:text-3xl font-semibold text-gold">
+              <div className="text-lg md:text-xl font-medium text-gold tracking-wide">
                 {stat.number}
               </div>
-              <div className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-1">
+              <div className="text-white/40 text-[10px] uppercase tracking-[0.3em] mt-1">
                 {stat.label}
               </div>
             </div>

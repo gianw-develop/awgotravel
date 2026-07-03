@@ -1,38 +1,38 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Raleway } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "AW GOTRAVEL | Luxury Travel Planning & Concierge Services",
+  title: "AW GOTRAVEL | Private Travel Design & Lifestyle Coordination",
   description:
-    "AW GOTRAVEL LLC provides luxury travel planning, bespoke itinerary design, hotel and flight booking assistance, vacation package coordination, and personal travel concierge services.",
+    "AW GOTRAVEL is a private travel design and lifestyle coordination firm for founders, executives, investors, and high-profile clients. We design private journeys around your lifestyle.",
   keywords: [
-    "luxury travel agency",
-    "travel planning",
-    "bespoke itineraries",
-    "travel concierge",
+    "private travel design",
+    "luxury travel coordination",
+    "executive travel planning",
+    "lifestyle concierge",
     "AW GOTRAVEL",
-    "booking assistance",
+    "bespoke travel experiences",
   ],
   openGraph: {
-    title: "AW GOTRAVEL | Luxury Travel Planning & Concierge Services",
+    title: "AW GOTRAVEL | Private Travel Design & Lifestyle Coordination",
     description:
-      "Bespoke luxury travel planning, itinerary design, and personal concierge services for discerning travelers.",
+      "Private travel design for founders, executives & high-profile clients. We don't sell trips — we design private journeys around your lifestyle.",
     url: "https://www.awgotravel.com",
     siteName: "AW GOTRAVEL",
     type: "website",
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${raleway.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${inter.variable} ${sora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

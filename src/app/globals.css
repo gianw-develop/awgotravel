@@ -13,8 +13,8 @@
   --color-slate: #64748B;
   --color-foreground: #1E293B;
   --color-background: #FFFFFF;
-  --font-sans: var(--font-raleway);
-  --font-heading: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-sora);
 }
 
 html {
@@ -29,8 +29,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), Georgia, serif;
-  letter-spacing: -0.01em;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 @keyframes float {

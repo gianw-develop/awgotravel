@@ -1,58 +1,59 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { Check, Globe, Heart, Award, ShieldCheck } from "lucide-react";
+import { Check, Lock, Clock, ShieldCheck, Fingerprint } from "lucide-react";
 import Link from "next/link";
 
 const reasons = [
   "Registered LLC — Wyoming, United States",
-  "All services provided directly by our team",
-  "Transparent pricing with no hidden fees",
-  "Clear cancellation and refund policies",
-  "Dedicated personal travel consultant assigned to you",
-  "Secure payments and confirmed booking documentation",
+  "All services designed and delivered directly by our team",
+  "Transparent pricing with clear scope documentation",
+  "Strict confidentiality — your itinerary is never shared",
+  "Dedicated travel director assigned to every engagement",
+  "Secure payments with full cancellation and refund policies",
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-28 relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1436491865332-7a61a109db05?auto=format&fit=crop&w=2000&q=80')`,
         }}
       />
-      <div className="absolute inset-0 bg-navy/90" />
+      <div className="absolute inset-0 bg-navy/92" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection>
-            <span className="text-gold text-xs font-medium tracking-[0.4em] uppercase">
+            <span className="text-gold text-[10px] font-medium tracking-[0.5em] uppercase">
               Why AW GOTRAVEL
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mt-3 mb-6">
-              Trust &amp; Transparency
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mt-4 mb-6 tracking-tight">
+              Not a Travel Agency.
+              <br />
+              <span className="font-medium">A Private Travel Design Firm.</span>
             </h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              AW GOTRAVEL LLC is a registered travel services company. We
-              provide online travel planning, itinerary assistance, hotel and
-              flight booking support, vacation package coordination, and
-              customer travel consultation services. You pay for services we
-              deliver directly.
+            <p className="text-white/60 text-lg leading-relaxed mb-8 font-light">
+              AW GOTRAVEL LLC is a registered company providing personalized
+              travel design, itinerary coordination, destination research, and
+              concierge-style support for premium clients. Every service is
+              performed directly by our team.
             </p>
             <ul className="space-y-4 mb-10">
               {reasons.map((reason) => (
                 <li key={reason} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                  <span className="text-white/80 text-sm">{reason}</span>
+                  <Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                  <span className="text-white/70 text-sm font-light">{reason}</span>
                 </li>
               ))}
             </ul>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-4 rounded-full transition-all duration-300 text-sm uppercase tracking-[0.2em]"
+              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy font-medium px-10 py-4 rounded-full transition-all duration-300 text-xs uppercase tracking-[0.3em]"
             >
-              About Our Company
+              About the Firm
             </Link>
           </AnimatedSection>
 
@@ -60,42 +61,35 @@ export function WhyChooseUs() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 {
-                  icon: Globe,
-                  number: "50+",
-                  label: "Countries",
-                  desc: "Worldwide planning",
+                  icon: Lock,
+                  title: "Privacy",
+                  desc: "Your journey stays private",
                 },
                 {
-                  icon: Heart,
-                  number: "98%",
-                  label: "Satisfaction",
-                  desc: "Client retention",
+                  icon: Clock,
+                  title: "Precision",
+                  desc: "Every detail engineered",
                 },
                 {
-                  icon: Award,
-                  number: "Top",
-                  label: "Rated",
-                  desc: "Luxury concierge",
+                  icon: Fingerprint,
+                  title: "Access",
+                  desc: "Experiences you can't Google",
                 },
                 {
                   icon: ShieldCheck,
-                  number: "100%",
-                  label: "Secure",
-                  desc: "Payment protection",
+                  title: "Trust",
+                  desc: "Registered & fully compliant",
                 },
               ].map((stat) => (
                 <div
-                  key={stat.label}
-                  className="glass-card rounded-2xl p-6 text-center hover:bg-white/12 transition-all duration-300"
+                  key={stat.title}
+                  className="glass-card rounded-2xl p-8 text-center hover:bg-white/12 transition-all duration-300"
                 >
-                  <stat.icon className="w-8 h-8 text-gold mx-auto mb-3" />
-                  <div className="text-3xl font-semibold text-white mb-1">
-                    {stat.number}
+                  <stat.icon className="w-7 h-7 text-gold mx-auto mb-4" />
+                  <div className="text-lg font-medium text-white mb-1 tracking-tight">
+                    {stat.title}
                   </div>
-                  <div className="text-gold text-sm font-semibold">
-                    {stat.label}
-                  </div>
-                  <div className="text-white/50 text-xs mt-1">{stat.desc}</div>
+                  <div className="text-white/40 text-xs font-light">{stat.desc}</div>
                 </div>
               ))}
             </div>

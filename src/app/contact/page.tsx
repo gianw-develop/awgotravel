@@ -117,29 +117,29 @@ export default function ContactPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
-            className="text-gold text-xs font-medium tracking-[0.4em] uppercase"
+            className="text-gold text-[10px] font-medium tracking-[0.5em] uppercase"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Get in Touch
+            Private Inquiry
           </motion.span>
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mt-3 mb-5"
+            className="text-4xl sm:text-5xl md:text-6xl font-light text-white mt-4 mb-5 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Contact Us
+            Start a <span className="font-medium">Conversation</span>
           </motion.h1>
           <motion.p
-            className="text-white/70 text-lg max-w-2xl mx-auto"
+            className="text-white/60 text-lg max-w-2xl mx-auto font-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Ready to plan your dream vacation? Fill out the form below and our
-            travel experts will get back to you within 24 hours.
+            Tell us what you&apos;re looking for. Our team will respond within
+            24 hours with a private consultation and initial scope.
           </motion.p>
         </div>
       </section>
@@ -150,13 +150,12 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <AnimatedSection>
                 <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-10">
-                  <h2 className="text-2xl font-semibold text-navy mb-2">
-                    Request a Travel Consultation
+                  <h2 className="text-2xl font-medium text-navy mb-2 tracking-tight">
+                    Tell Us What You Need
                   </h2>
-                  <p className="text-slate text-sm mb-8">
-                    Tell us about your ideal journey. Our consultants will design
-                    a personalized itinerary and provide a detailed service
-                    proposal.
+                  <p className="text-slate text-sm mb-8 font-light">
+                    Share your preferences and our team will design a private
+                    consultation tailored to your goals.
                   </p>
 
                   {status === "sent" ? (
@@ -368,12 +367,12 @@ export default function ContactPage() {
                   ))}
 
                   <div className="bg-navy rounded-xl p-8 text-center">
-                    <h3 className="text-lg font-bold text-white mb-3">
-                      Need Immediate Help?
+                    <h3 className="text-lg font-medium text-white mb-3 tracking-tight">
+                      Need Immediate Assistance?
                     </h3>
-                    <p className="text-white/70 text-sm mb-5">
-                      Our travel experts are ready to assist you with any
-                      questions.
+                    <p className="text-white/60 text-sm mb-5 font-light">
+                      Our team is ready to help with any questions about our
+                      services.
                     </p>
                     <a
                       href="mailto:sales@awgotravel.com"

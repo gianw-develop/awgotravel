@@ -1,94 +1,129 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import {
-  Plane,
-  Hotel,
-  Map,
-  Headphones,
-  Shield,
-  CalendarCheck,
-} from "lucide-react";
+import { Compass, Briefcase, Crown, Lock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Map,
-    title: "Bespoke Itinerary Design",
+    icon: Compass,
+    title: "Founder Escape Design",
+    price: "$1,500",
     description:
-      "Our travel consultants design custom itineraries tailored to your preferences, interests, and pace. Every detail is planned by our team.",
+      "For founders and executives who need to disconnect without losing control. A private, high-level escape designed around your pace — not a vacation, a strategic reset.",
+    includes: [
+      "Private destination strategy",
+      "Premium accommodation",
+      "Workspace-ready environments",
+      "Wellness & dining curation",
+    ],
   },
   {
-    icon: Plane,
-    title: "Flight Booking Assistance",
+    icon: Briefcase,
+    title: "Executive Lifestyle Journey",
+    price: "$2,500",
     description:
-      "We research, compare, and book the best flights for your journey. Premium cabins, flexible options, and the best routes — handled by us.",
+      "Business meets leisure. Designed for networking trips, conferences, private meetings, or premium vacations where every hour matters.",
+    includes: [
+      "Full itinerary design",
+      "Premium transfers & hotels",
+      "Private dining coordination",
+      "Flexible agenda management",
+    ],
   },
   {
-    icon: Hotel,
-    title: "Hotel & Resort Coordination",
+    icon: Crown,
+    title: "Private Luxury Experience",
+    price: "$4,000",
     description:
-      "We personally vet and book luxury accommodations — from five-star hotels to boutique villas — ensuring quality and your satisfaction.",
+      "High-level private experiences — celebrations, family office travel, wellness retreats, villas, yachts, and exclusive access to events, art, and culture.",
+    includes: [
+      "End-to-end experience design",
+      "Premium provider coordination",
+      "Concierge support throughout",
+      "Full change management",
+    ],
   },
   {
-    icon: CalendarCheck,
-    title: "Vacation Package Coordination",
+    icon: Lock,
+    title: "Ultra-Private Bespoke Travel",
+    price: "By Application",
     description:
-      "We assemble complete travel packages with confirmed bookings, transfers, and activities. You receive a fully organized travel experience.",
-  },
-  {
-    icon: Headphones,
-    title: "Personal Travel Concierge",
-    description:
-      "Dedicated concierge support before, during, and after your trip. Restaurant reservations, local experiences, and real-time assistance.",
-  },
-  {
-    icon: Shield,
-    title: "Travel Protection Guidance",
-    description:
-      "We advise on comprehensive travel insurance options and help you understand cancellation policies for complete peace of mind.",
+      "For complex, multi-country, high-security, or ultra-private journeys. Jets, villas, staff, private events, and sensitive logistics handled with absolute discretion.",
+    includes: [
+      "Custom scope & planning",
+      "Multi-destination coordination",
+      "Private security logistics",
+      "Dedicated travel director",
+    ],
   },
 ];
 
 export function Services() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
-          <span className="text-gold text-xs font-medium tracking-[0.4em] uppercase">
-            Our Services
+        <AnimatedSection className="text-center mb-20">
+          <span className="text-gold text-[10px] font-medium tracking-[0.5em] uppercase">
+            What We Design
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mt-3 mb-5">
-            What We Do for You
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-navy mt-4 mb-5 tracking-tight">
+            Your Journey Is Not Booked.{" "}
+            <span className="font-medium">It Is Designed.</span>
           </h2>
-          <p className="text-slate max-w-2xl mx-auto text-lg">
-            AW GOTRAVEL provides direct travel planning and booking assistance
-            services. Every service below is performed by our team.
+          <p className="text-slate max-w-2xl mx-auto text-lg font-light leading-relaxed">
+            We don&apos;t sell generic bookings. We design private travel
+            experiences for clients who value time, privacy, and precision.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, i) => (
             <AnimatedSection key={service.title} delay={i * 100}>
-              <div className="group p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 bg-white">
-                <div className="w-14 h-14 rounded-xl bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center mb-6 transition-colors duration-300">
-                  <service.icon className="w-7 h-7 text-navy group-hover:text-gold transition-colors duration-300" />
+              <div className="group p-8 sm:p-10 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-xl transition-all duration-500 bg-white h-full flex flex-col">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center transition-colors duration-300">
+                    <service.icon className="w-6 h-6 text-navy group-hover:text-gold transition-colors duration-300" />
+                  </div>
+                  <span className="text-gold font-medium text-sm tracking-wide">
+                    {service.price}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">
+                <h3 className="text-xl font-medium text-navy mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-slate text-sm leading-relaxed">
+                <p className="text-slate text-sm leading-relaxed mb-6 font-light flex-1">
                   {service.description}
                 </p>
+                <div className="space-y-2 mb-6">
+                  {service.includes.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2.5 text-sm text-navy/70"
+                    >
+                      <div className="w-1 h-1 rounded-full bg-gold shrink-0" />
+                      <span className="font-light">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-gold font-medium text-xs uppercase tracking-[0.2em] hover:gap-3 transition-all duration-300"
+                >
+                  {service.price === "By Application"
+                    ? "Request Access"
+                    : "Begin Planning"}{" "}
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </AnimatedSection>
           ))}
         </div>
 
-        <AnimatedSection className="text-center mt-14">
+        <AnimatedSection className="text-center mt-16">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 border-2 border-navy hover:bg-navy text-navy hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-sm uppercase tracking-[0.2em]"
+            className="inline-flex items-center gap-2 border border-navy hover:bg-navy text-navy hover:text-white font-medium px-10 py-4 rounded-full transition-all duration-300 text-xs uppercase tracking-[0.3em]"
           >
             View All Services
           </Link>

@@ -50,12 +50,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <Logo light className="mb-6" />
-            <p className="text-white/70 text-sm leading-relaxed mb-4">
-              AW GOTRAVEL LLC provides luxury travel planning, itinerary
-              design, booking assistance, and personal concierge services.
+            <p className="text-white/50 text-sm leading-relaxed mb-4 font-light">
+              A private travel design and lifestyle coordination firm for
+              founders, executives, and high-profile clients.
             </p>
-            <p className="text-white/50 text-xs mb-6">
-              Registered in Wyoming, USA
+            <p className="text-white/30 text-xs mb-6 font-light">
+              Registered LLC — Wyoming, USA
             </p>
             <div className="flex gap-4">
               {socialIcons.map((Icon, i) => (

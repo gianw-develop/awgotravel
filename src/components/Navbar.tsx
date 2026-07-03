@@ -52,7 +52,7 @@ export function Navbar() {
             href="/contact"
             className="bg-gold hover:bg-gold-dark text-navy font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg uppercase tracking-wider"
           >
-            Book Now
+            Inquire
           </Link>
         </div>
 
@@ -84,10 +84,10 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="block text-center bg-gold hover:bg-gold-dark text-navy font-semibold py-3 rounded-full mt-4 uppercase tracking-wider"
+              className="block text-center bg-gold hover:bg-gold-dark text-navy font-medium py-3 rounded-full mt-4 uppercase tracking-[0.2em] text-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book Now
+              Inquire
             </Link>
           </div>
         </div>
