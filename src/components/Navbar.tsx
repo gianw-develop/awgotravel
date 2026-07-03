@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -27,13 +26,17 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-3"
+          ? "bg-navy/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-          <Logo light={!isScrolled} />
+          <img
+            src="/logo.png"
+            alt="AW GOTRAVEL"
+            className="h-9 sm:h-10 object-contain"
+          />
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -41,18 +44,14 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-gold ${
-                isScrolled ? "text-navy" : "text-white"
-              }`}
+              className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 text-white hover:text-gold"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/login"
-            className={`text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-gold ${
-              isScrolled ? "text-navy" : "text-white"
-            }`}
+            className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 text-white hover:text-gold"
           >
             Client Portal
           </Link>
@@ -70,9 +69,9 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={`w-6 h-6 ${isScrolled ? "text-navy" : "text-white"}`} />
+            <X className="w-6 h-6 text-white" />
           ) : (
-            <Menu className={`w-6 h-6 ${isScrolled ? "text-navy" : "text-white"}`} />
+            <Menu className="w-6 h-6 text-white" />
           )}
         </button>
       </nav>
