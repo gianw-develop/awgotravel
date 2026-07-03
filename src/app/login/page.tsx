@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Logo } from "@/components/Logo";
 import { Mail, Lock, ArrowRight, Eye, EyeOff } from "lucide-react";
 
 export default function LoginPage() {
@@ -56,8 +55,8 @@ export default function LoginPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-10">
-            <Link href="/">
-              <Logo className="mb-8" />
+            <Link href="/" className="inline-block mb-8">
+              <img src="/logo.png" alt="AW GOTRAVEL" className="h-10 object-contain" />
             </Link>
             <h1 className="text-2xl font-light text-navy tracking-tight">
               Client <span className="font-medium">Sign In</span>

@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   title: "AW GOTRAVEL | Private Travel Design & Lifestyle Coordination",
   description:
     "AW GOTRAVEL is a private travel design and lifestyle coordination firm for founders, executives, investors, and high-profile clients. We design private journeys around your lifestyle.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   keywords: [
     "private travel design",
     "luxury travel coordination",
